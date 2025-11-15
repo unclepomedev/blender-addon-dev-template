@@ -3,6 +3,7 @@
 import bpy
 
 
+# see also: https://docs.blender.org/api/current/bpy.types.AddonPreferences.html
 class HwAddonPreferences(bpy.types.AddonPreferences):
     bl_idname = __package__  # "addon_hello_world"
 
