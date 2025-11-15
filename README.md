@@ -45,6 +45,8 @@ uv run pytest
 
 ### CI
 
+In CI, run linting, execute Pytest, and generate a ZIP file that can be installed in Blender.
+
 Blender is not included in the CI workflow because running Blender itself on GitHub Actions requires heavy setup, varies
 by platform, and provides little benefit for this template.
 Logic tests run without Blender are sufficient, and actual Blender execution should be validated locally.
