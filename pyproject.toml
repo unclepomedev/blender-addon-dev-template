@@ -16,3 +16,13 @@ dev = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests/unit"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["addon_hello_world"]
