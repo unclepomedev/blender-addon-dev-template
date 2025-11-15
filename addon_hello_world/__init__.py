@@ -1,15 +1,22 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from . import hello_operator, hello_ui_panel
+_modules: None | tuple = None
 
-modules = (hello_operator, hello_ui_panel)
+
+def _ensure_modules():
+    global _modules
+    if _modules is None:
+        from . import hello_operator, hello_ui_panel
+        _modules = (hello_operator, hello_ui_panel)
 
 
 def register():
-    for m in modules:
+    _ensure_modules()
+    for m in _modules:
         m.register()
 
 
 def unregister():
-    for m in reversed(modules):
+    _ensure_modules()
+    for m in reversed(_modules):
         m.unregister()
