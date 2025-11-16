@@ -63,7 +63,7 @@ the SPDX format.
 ### INIT
 
 (This is a temporary method, and we plan to make it possible to obtain the template directly from the Git remote in the
-future.)
+future. #1 )
 
 Initialize a new project from this template by copying files and replacing all occurrences of `addon_hello_world` with
 your add-on name.
