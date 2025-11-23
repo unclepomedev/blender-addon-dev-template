@@ -12,7 +12,6 @@ dev = [
     "mypy>=1.18.2",
     "pytest>=9.0.1",
     "ruff>=0.14.5",
-    "blender-addon-dev-template-loader",
 ]
 
 [tool.pytest.ini_options]
@@ -27,6 +26,3 @@ package = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["addon_hello_world"]
-
-[tool.uv.sources]
-blender-addon-dev-template-loader = { git = "https://github.com/unclepomedev/blender-addon-dev-template-loader" }
