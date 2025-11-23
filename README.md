@@ -2,6 +2,8 @@
 
 A minimal, production-ready template for creating Blender add-ons.
 
+Use the repository below to instantly initialize a project structure based on this template: https://github.com/unclepomedev/blender-addon-dev-template-loader
+
 ## 📁 Project Structure
 
 ```bash
