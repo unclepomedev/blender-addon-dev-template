@@ -2,6 +2,8 @@
 
 A minimal, production-ready template for creating Blender add-ons.
 
+Use the repository below to instantly initialize a project structure based on this template: https://github.com/unclepomedev/blender-addon-dev-template-loader
+
 ## 📁 Project Structure
 
 ```bash
@@ -59,25 +61,3 @@ are [recommended](https://docs.blender.org/manual/en/latest/advanced/extensions/
 v3 or later.
 This repository provides an example of publishing a Blender add-on under a compatible license, GPL v3 or later, using
 the SPDX format.
-
-### INIT
-
-(This is a temporary method, and we plan to make it possible to obtain the template directly from the Git remote in the
-future. #1 )
-
-Initialize a new project from this template by copying files and replacing all occurrences of `addon_hello_world` with
-your add-on name.
-
-```bash
-# create ./my_cool_addon/ from the current template
-uv run python [path/to/tools/init_from_template.py] my_cool_addon --template [path/to/this/dir] --outdir [path/to/output/dir]
-```
-
-- Dry-run (no write):
-
-```bash
-uv run python [path/to/tools/init_from_template.py] my_cool_addon --template [path/to/this/dir] --outdir [path/to/output/dir] --dry-run
-```
-
-This generates `./my_cool_addon/` with directory names, file names, and file contents updated from `addon_hello_world`
-to your specified name. 
