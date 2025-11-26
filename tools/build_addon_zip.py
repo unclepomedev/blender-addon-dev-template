@@ -4,7 +4,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ADDON_DIR = ROOT / "savepoints"
+ADDON_DIR = ROOT / "addon_hello_world"
 DIST_DIR = ROOT / "dist"
 
 # Files/Folders to exclude
@@ -30,7 +30,7 @@ def main():
     version = get_version()
     DIST_DIR.mkdir(exist_ok=True)
 
-    zip_filename = f"savepoints-{version}.zip"
+    zip_filename = f"addon_hello_world-{version}.zip"
     zip_path = DIST_DIR / zip_filename
 
     if zip_path.exists():
