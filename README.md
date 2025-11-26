@@ -30,30 +30,30 @@ Use the repository below to instantly initialize a project structure based on th
 Separate tests into Blender-dependent and pure logic parts.
 To enable testing of the logic layer, defer importing any modules that rely on bpy or its stubs.
 
-You can run tests using `uv` tasks or `make`.
+You can run tests using `uv` tasks or `just`.
 
-**Prerequisite**: To run integration tests, the `blender` command must be in your system PATH.
-*(e.g. On macOS, you may need to add `/Applications/Blender.app/Contents/MacOS/Blender` to your PATH or alias it).*
+**Prerequisite**: To run integration tests using `uv` tasks, the `blender` command must be in your system PATH.
+If you use `just`, you can configure the path to the Blender executable directly in the `justfile`.
 
 **Run all tests (Unit + Integration):**
 ```bash
 uv run poe test
 # or
-make test
+just test
 ```
 
 **Run only Unit tests:**
 ```bash
 uv run poe unit
 # or
-make unit
+just unit
 ```
 
 **Run only Blender Integration tests:**
 ```bash
 uv run poe test-blender
 # or
-make test-blender
+just test-blender
 ```
 
 ### CI
