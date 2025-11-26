@@ -30,19 +30,30 @@ Use the repository below to instantly initialize a project structure based on th
 Separate tests into Blender-dependent and pure logic parts.
 To enable testing of the logic layer, defer importing any modules that rely on bpy or its stubs.
 
-The tests under tests/blender are executed within a Blender environment.
-For example, on macOS you can run them with the following command:
+You can run tests using `uv` tasks or `make`.
 
+**Prerequisite**: To run integration tests, the `blender` command must be in your system PATH.
+*(e.g. On macOS, you may need to add `/Applications/Blender.app/Contents/MacOS/Blender` to your PATH or alias it).*
+
+**Run all tests (Unit + Integration):**
 ```bash
-/Applications/Blender.app/Contents/MacOS/Blender \
-  --background --factory-startup --python tests/blender/test_in_blender.py
+uv run poe test
+# or
+make test
 ```
 
-The tests under `tests/unit` can be executed independently of Blender.
-Just like typical Python tests, you can run them, like:
-
+**Run only Unit tests:**
 ```bash
-uv run pytest
+uv run poe unit
+# or
+make unit
+```
+
+**Run only Blender Integration tests:**
+```bash
+uv run poe test-blender
+# or
+make test-blender
 ```
 
 ### CI

@@ -10,6 +10,7 @@ dependencies = []
 dev = [
     "fake-bpy-module-latest>=20251003",
     "mypy>=1.18.2",
+    "poethepoet>=0.38.0",
     "pytest>=9.0.1",
     "ruff>=0.14.5",
 ]
@@ -26,3 +27,8 @@ package = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["addon_hello_world"]
+
+[tool.poe.tasks]
+test = ["unit", "test-blender"]
+unit = "pytest"
+test-blender = "blender --background --python tests/blender/test_in_blender.py"
