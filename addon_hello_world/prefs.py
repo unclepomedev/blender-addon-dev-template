@@ -7,7 +7,7 @@ import bpy
 class HwAddonPreferences(bpy.types.AddonPreferences):
     bl_idname = __package__  # "addon_hello_world"
 
-    sample_text: bpy.props.StringProperty(
+    sample_text: bpy.props.StringProperty(  # type: ignore
         name="Sample Text",
         default="Hello",
     )

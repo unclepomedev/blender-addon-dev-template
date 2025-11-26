@@ -32,3 +32,9 @@ packages = ["addon_hello_world"]
 test = ["unit", "test-blender"]
 unit = "pytest"
 test-blender = "blender --background --python tests/blender/test_in_blender.py"
+
+[tool.mypy]
+files = ["addon_hello_world", "tools", "tests"]
+python_version = "3.11"
+ignore_missing_imports = true
+disable_error_code = ["import-untyped", "valid-type"]
