@@ -7,7 +7,7 @@ type = "add-on"
 
 blender_version_min = "5.0.0"
 
-maintainer = "Your Name <you@example.com>"
+maintainer = "MAINTAINER_STRING"
 license = [
     "SPDX:GPL-3.0-or-later",
 ]
