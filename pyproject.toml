@@ -9,6 +9,7 @@ dependencies = []
 [dependency-groups]
 dev = [
     "fake-bpy-module-latest>=20251003",
+    "maturin>=1.10.2",
     "mypy>=1.18.2",
     "poethepoet>=0.38.0",
     "pytest>=9.0.1",
